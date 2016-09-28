@@ -29,7 +29,7 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-	<title>About - M.A.D. Club at Embry-Riddle Aeronautical University</title>
+	<title>News - M.A.D. Club at Embry-Riddle Aeronautical University</title>
 
 	<!-- CSS  -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -58,25 +58,25 @@
 	</style>
 </head>
 
-<body class="black black-text">
+<body class="black white-text">
 	<a id="logo-container" href="index.html" class="black-text brand-logo">
 		<div class="navbar-fixed">
 			<nav class="yellow darken-3" role="navigation">
 				<div class="nav-wrapper container"><b>MAD</b> Club
 					<ul class="right hide-on-med-and-down">
 
-						<li class="active"><a href="about.html" class="black-text">About</a></li>
+						<li><a href="about.html" class="black-text">About</a></li>
 						<li><a href="schedule.html" class="black-text">Schedule</a></li>
-						<li><a href="news.html" class="black-text">News</a></li>
+						<li class="active"><a href="news.html" class="black-text">News</a></li>
 						<li><a href="resources.html" class="black-text">Resources</a></li>
 						<li><a href="apps.html" class="black-text">Products</a></li>
 <!--						<li><b class="black-text"><a href="#" class="black-text">Next meeting: 9/14</a> </b></li>-->
 					</ul>
 
 					<ul id="nav-mobile" class="side-nav">
-						<li class="active"><a href="about.html" class="black-text">About</a></li>
+						<li><a href="about.html" class="black-text">About</a></li>
 						<li><a href="schedule.html" class="black-text">Schedule</a></li>
-						<li><a href="news.html" class="black-text">News</a></li>
+						<li class="active"><a href="news.html" class="black-text">News</a></li>
 						<li><a href="resources.html" class="black-text">Resources</a></li>
 						<li><a href="apps.html" class="black-text">Products</a></li>
 					</ul>
@@ -89,78 +89,51 @@
 		<div class="container">
 			<div class="row">
 				<br>
-				
 				<div class="col s12 m12">
-					
-					<div class="card-panel white">
-		
-				<!--   Icon Section   -->
-				<div class="row" style="margin-top: -20px;">
-					<div class="col s12 m12">
-						<h3 class="header">About</h3>
-						<h5 class="">What is the MAD Club?</h5>
+					<div class="card-panel white"><span class="black-text">
+						<h3 class="header" style="margin-top: 0px;">News</h3>
+						The following is sourced from our student organization management platform, ERAU Connection.
+						<br><br>
+						 <div id="content">Loading...</div>
 
-						<p class="">The Mobile Application Development Club (MAD Club) is Embry-Riddle's only student organization dedicated to the creation of mobile applications. This student-led organization provides students across campus the opportunity to learn and apply their skills to Software and Computer Engineering fields. Opportunities that will be available for members include workshops, student-led projects, and competitive application development.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s12 m12">
-						<h5 class="">What is a mobile application?</h5>
-						<blockquote>
-							"A mobile app is a software application developed specifically for use on small, wireless computing devices, such as smartphones and tablets, rather than desktop or laptop computers."
-							<br>
-							<br>
-							<a class="yellow-text text-darken-3" target="_blank" href="http://whatis.techtarget.com/definition/mobile-app"> TechTarget.com</a>
-						</blockquote>
-						<p class="">The MAD Club works with more than just applications designed for a single smartphone. Mobile applications development encompasses devices across the board - including smartphones, tablets, smartwatches, virtual reality (VR) apparatuses, and others. </p>
-						<br>
-						<p>In mobile app development, the MAD Club targets four major areas:</p>
-					</div>
-				
-					<div class="col s12 m6">
-						<div class="icon-block">
-							<h2 class="center yellow-text text-darken-3"><i class="material-icons">grid_on</i></h2>
-							<h5 class="center">Design</h5>
+						<script type="text/javascript">
+							var content = document.getElementById('content');
 
-							<p class="">A well developed mobile application is one that excels both in function and in form. Club members will learn more about the proper design language for an app while creating beautiful and flexible user interfaces.</p>
-						</div>
-					</div>
+							var xhr = new XMLHttpRequest();
 
-					<div class="col s12 m6">
-						<div class="icon-block">
-							<h2 class="center yellow-text text-darken-3"><i class="material-icons">playlist_add_check</i></h2>
-							<h5 class="center">Functionality</h5>
+							xhr.onreadystatechange = function(){
+									if (xhr.readyState==4 && xhr.status==200)
+									{
+										var data = JSON.parse(xhr.responseText);
+										if(data.status == 'ok'){
 
-							<p class="">Members will design and build mobile applications that have a defined purpose and function and always have some value to the user. Functions can go far beyond the software itself, and the application can integrate with other software and hardware. </p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s12 m6">
-						<div class="icon-block">
-							<h2 class="center yellow-text text-darken-3"><i class="material-icons">code</i></h2>
-							<h5 class="center">Programming</h5>
+											var output = '';
 
-							<p class="">At the core of any mobile application is the code that defines the software. This is the traditional aspect of mobile application development. Members will collaborate to build applications for various platforms in various languages, such as C, Java, HTML, Javascript, and more.</p>
-						</div>
-					</div>
-					<div class="col s12 m6">
-						<div class="icon-block">
-							<h2 class="center yellow-text text-darken-3"><i class="material-icons">screen_share</i></h2>
-							<h5 class="center">Distribution</h5>
+											for(var i=0;i<5;++i){
+												output += '<hr><h5><i class="material-icons"></i>' + data.items[i].title + '</h5>';
+												output += '<p>' + data.items[i].pubDate + '</p>';
+												output += '<p>' + data.items[i].description + '';
+												output += '<a class="yellow-text text-darken-3" target="_new" href="' +
+														data.items[i].link + '" >' +
+														' Read more...' + '</a></p>';
 
-							<p class="">Preparing an application for distribution is often overlooked in most workshops and development sessions. Members will build applications and software that are scalable and can be implemented on hundreds of different devices.</p>
-						</div>
-					</div>
-				</div>
-
-			</div>
+											}
 
 
-			<div class="section">
+											content.innerHTML = output;
 
-			</div>
-		
+										}
+									}
+								};
+							xhr.open('GET','http://rss2json.com/api.json?rss_url=https://connection.erau.edu/organization/MADclub/news/rss',true);
+							xhr.send();
+
+						</script>
+						
+						
+						 
+						
+          </span>
 					</div>
 				</div>
 			</div>
@@ -214,6 +187,13 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="js/materialize.js"></script>
 		<script src="js/init.js"></script>
+	<script>
+		$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+	</script>
+
 
 </body>
 
