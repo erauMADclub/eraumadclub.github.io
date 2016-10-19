@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+	<link rel="manifest" href="icon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#f9a825">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#f9a825">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+	<title>{{ page.title}} - M.A.D. Club at Embry-Riddle Aeronautical University</title>
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+	<style>
+		blockquote {
+			margin: 20px 0;
+			padding-left: 1.5rem;
+			border-left: 5px solid #f9a825;
+			/* Just change the color value and that's it*/
+		}
+		
+		.madlogo {
+			display: block;
+			max-width: 100px;
+			min-width: 60px;
+			position: fixed;
+			left: 60px;
+			top: 20px;
+			width: 10%;
+			z-index: 10000
+		}
+
+	</style>
+</head>
+
+<body class="black white-text">
+	<a id="logo-container" href="index.html" class="black-text brand-logo">
+		<div class="navbar-fixed">
+			<nav class="yellow darken-3" role="navigation">
+				<div class="nav-wrapper container"><b>MAD</b> Club
+					<ul class="right hide-on-med-and-down">
+
+						<li><a href="about.html" class="black-text">About</a></li>
+						<li><a href="schedule.html" class="black-text">Schedule</a></li>
+						<li class="active"><a href="news.html" class="black-text">News</a></li>
+						<li><a href="resources.html" class="black-text">Resources</a></li>
+						<li><a href="apps.html" class="black-text">Products</a></li>
+<!--						<li><b class="black-text"><a href="#" class="black-text">Next meeting: 9/14</a> </b></li>-->
+					</ul>
+
+					<ul id="nav-mobile" class="side-nav">
+						<li><a href="about.html" class="black-text">About</a></li>
+						<li><a href="schedule.html" class="black-text">Schedule</a></li>
+						<li class="active"><a href="news.html" class="black-text">News</a></li>
+						<li><a href="resources.html" class="black-text">Resources</a></li>
+						<li><a href="apps.html" class="black-text">Products</a></li>
+					</ul>
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons black-text">menu</i></a>
+				</div>
+			</nav>
+		</div>
+
+		<!-- CONTENT -->
+		<div class="container">
+			<div class="row">
+				<br>
+				<div class="col s12 m12">
+					<div class="card-panel white"><span class="black-text">
+						<h3 class="header" style="margin-top: 0px;">{{ page.title }}</h3>
+              
+              {{ content }}
+						
+						 
+						
+          </span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- CONTENT END -->
+		</div>
+		</div>
+
+		<footer class="page-footer yellow darken-3">
+			<div class="container">
+
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="black-text">About</h5>
+						<p class="black-text text-lighten-4">The Mobile Application Development Club was created in the fall of 2014 to educate students across campus on mobile app development. The organization is designed for students of any discipline, not just computer science and software engineering. </p>
+
+
+					</div>
+					<div class="col l3 s12">
+						<!--
+					<h5 class="black-text">Settings</h5>
+					<ul>
+						<li><a class="black-text" href="#!">Link 1</a></li>
+						<li><a class="black-text" href="#!">Link 2</a></li>
+						<li><a class="black-text" href="#!">Link 3</a></li>
+						<li><a class="black-text" href="#!">Link 4</a></li>
+					</ul>
+-->
+					</div>
+					<div class="col l3 s12">
+						<h5 class="black-text">Connect</h5>
+						<ul>
+							<li><a class="black-text" href="https://www.facebook.com/erauMADclub/">Facebook</a></li>
+							<li><a class="black-text" href="https://connection.erau.edu/organization/MADclub">ERAU Connection</a></li>
+							<li><a class="black-text" href="https://github.com/erauMADclub/">Github</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container grey-text text-darken-4">
+					Made with love at ERAU
+				</div>
+			</div>
+		</footer>
+
+
+		<!--  Scripts-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/init.js"></script>
+	<script>
+		$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+	</script>
+
+
+</body>
+
+</html>
