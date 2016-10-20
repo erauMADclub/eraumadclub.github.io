@@ -1,6 +1,6 @@
 ---
 title: Blog Launched
-date: 2016-10-19 00:00:00 Z
+date: 2016-10-20 00:00:00 Z
 layout: post
 ---
 
