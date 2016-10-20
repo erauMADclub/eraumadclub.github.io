@@ -1,2 +1,3 @@
 name: M.A.D. Club at Embry-Riddle Aeronautical University
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
