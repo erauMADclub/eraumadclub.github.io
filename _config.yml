@@ -1,0 +1,19 @@
+---
+title: Eraumadclub.Github.Io
+timezone: UTC
+collections:
+  meetings:
+    title: Meetings
+    output: true
+  posts:
+    title: Posts
+    output: true
+  products:
+    title: Products
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+name: M.A.D. Club at Embry-Riddle Aeronautical University
+markdown: kramdown
+permalink: "/blog/:year/:month/:day/:title"
