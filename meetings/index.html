@@ -5,22 +5,56 @@ layout: page
 
 <h3>{{ page.title }}</h3>
 <ul class="meetings">
+	<h5>Upcoming meetings: </h5>
 	{% for meeting in site.meetings reversed %}
-		{% if meeting.cancelled == true %}
+		{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+		{% capture posttime %}{{meeting.date | date: '%s'}}{% endcapture %}
+		
+		{% if posttime > nowunix %}
+			{% if meeting.cancelled == true %}
 			<blockquote style="border-left: 5px solid #f44336;">
-		{% elsif meeting.upcoming == true %}
-			<blockquote style="border-left: 5px solid #4caf50;">
-		{% else %}
-			<blockquote>
+			{% elsif meeting.upcoming == true %}
+				<blockquote style="border-left: 5px solid #4caf50;">
+			{% else %}
+				<blockquote>
+			{% endif %}
+					
+				<h5><b>{{ meeting.title }}</b></h5> {{ meeting.date | date: "%A, %B %-d, %Y at %-I:%M %p"}} in LB 164
+				<p>{{ meeting.description }}			
+					{% if meeting.presentation_path %}
+					<br>
+					<br>
+					<a target="_blank" href="files/MAD%20Interest%20Meeting%202016.pdf" class="yellow darken-3 waves-effect waves-light btn">View the presentation</a>
+					<br>
 		{% endif %}
-			<h5><b>{{ meeting.title }}</b></h5> {{ meeting.date | date: "%A, %B %-d, %Y at %-I:%M %p"}} in LB 164
-			<p>{{ meeting.description }}			
-				{% if meeting.presentation_path %}
-				<br>
-				<br>
-				<a target="_blank" href="files/MAD%20Interest%20Meeting%202016.pdf" class="yellow darken-3 waves-effect waves-light btn">View the presentation</a>
-				<br>
-				{% endif %}
-		</blockquote>
+		</blockquote>		
+		{% endif %}
+	{% endfor %}
+	
+	<div class="divider"></div>
+	<h5>Past meetings: </h5>
+	{% for meeting in site.meetings reversed %}
+		{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+		{% capture posttime %}{{meeting.date | date: '%s'}}{% endcapture %}
+		
+		{% if posttime < nowunix %}
+			{% if meeting.cancelled == true %}
+			<blockquote style="border-left: 5px solid #f44336;">
+			{% elsif meeting.upcoming == true %}
+				<blockquote style="border-left: 5px solid #4caf50;">
+			{% else %}
+				<blockquote>
+			{% endif %}
+					
+				<h5><b>{{ meeting.title }}</b></h5> {{ meeting.date | date: "%A, %B %-d, %Y at %-I:%M %p"}} in LB 164
+				<p>{{ meeting.description }}			
+					{% if meeting.presentation_path %}
+					<br>
+					<br>
+					<a target="_blank" href="files/MAD%20Interest%20Meeting%202016.pdf" class="yellow darken-3 waves-effect waves-light btn">View the presentation</a>
+					<br>
+		{% endif %}
+		</blockquote>		
+		{% endif %}
 	{% endfor %}
 </ul>
