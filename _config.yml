@@ -8,9 +8,6 @@ collections:
   posts:
     title: Posts
     output: true
-  uploads:
-    title: Uploads
-    output: true
 name: M.A.D. Club at Embry-Riddle Aeronautical University
 markdown: kramdown
 permalink: "/blog/:year/:month/:day/:title"
