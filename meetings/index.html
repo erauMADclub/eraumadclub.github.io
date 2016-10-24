@@ -17,7 +17,12 @@ layout: page
 				<blockquote>
 			{% endif %}
 					
-				<h5><b>{{ meeting.title }}</b></h5> {{ meeting.date | date: "%A, %B %-d, %Y at %-I:%M %p"}} in LB 164
+				<h5><b>{{ meeting.title }}</b></h5> {{ meeting.date | date: "%A, %B %-d, %Y at %-I:%M %p"}} in 
+					{% if meeting.location %}
+					<b>{{ meeting.location }}</b>
+					{% else %}
+						LB 164
+					{% endif %}
 				<p>{{ meeting.description }}			
 					{% if meeting.presentation_path %}
 					<br>
