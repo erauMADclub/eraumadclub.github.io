@@ -6,7 +6,7 @@ layout: page
 <h3>{{ page.title }}</h3>
 <ul class="meetings">
 	<h5>Upcoming meetings: </h5>
-	{% for meeting in site.meetings reversed %}
+	{% for meeting in site.meetings %}
 		{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
 		{% capture posttime %}{{meeting.date | date: '%s'}}{% endcapture %}
 		
