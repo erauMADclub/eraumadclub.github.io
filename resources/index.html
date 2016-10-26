@@ -1,33 +1,42 @@
 --- 
-title: Meetings 
-layout: page 
+title: Resources
+layout: nav
 ---
 
-<!-- CONTENT -->
+<br>
+<div class="container">
+	<h3 class="header yellow-text text-darken-3" style="margin-top: 0px;">Resources</h3> Members of the Mobile Application Development Club have access to all of the resources below for personal application and software development.
+	<br>
+	<br>
+  <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+  <style>
+    .grid-sizer{ width: 33%; } .grid-item{ width: 32%; } @media only screen and (max-width : 480px) { .card { width: 100%} }  
+  </style>
 
-						<h3 class="header" style="margin-top: 0px;">Resources</h3>
-						Members of the Mobile Application Development Club have access to all of the resources below for personal application and software development.
-						<br><Br>
-						 
-						<a target="_blank" href="https://goo.gl/forms/ggjbAtlDMFyAR3S23" class="yellow darken-3 waves-effect waves-light btn">Check out a device</a>
-						
-						 <br><br>
-						 
-						<script type="x-gridspree-template">
-						  <table class="bordered highlight responsive">
-							<th>Device</th> <th>Description</th> <th>Available</th> 
-							
-							{{\#rows}}
-							  <tr>
-								<td><b>{{Device}}</b></td>
-								<td>{{Features}}</td>
-								<td>{{Available}}</td>
-							  </tr>
-							  
-							{{\/rows}}
-						 </table>
-						</script>
-						
-			
+  {% for category in site.data.resources %}
+  <h4>{{ category.category }}</h4>
+	<div class="row">
+		
+		<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition":true}'>
+      <div class="grid-sizer"></div>
+      {% for resource in category.resources %}
+			<div class="card white grid-item">
+				<div class="card-content black-text" style="min-height: 0px;">
+					<span class="card-title">{{ resource.name }}</span>
+					<p>{{ resource.description }}</p>
+					
+					{% for tag in resource.tags %} <div class="chip">{{ tag.tag }}</div> {% endfor %}
+				</div>
 
-<!-- CONTENT END -->
+				<div class="card-action">
+					<a href="{{ resource.url }}">{% if resource.url_text %}{{resource.url_text}}{% else %}View Resource{% endif %}</a>
+				</div>
+			</div>
+      {% endfor %}
+		</div>
+		
+	</div>
+  {% endfor %}
+
+
+</div>

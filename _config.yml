@@ -2,9 +2,11 @@
 title: Eraumadclub.Github.Io
 timezone: UTC
 collections:
+  categories:
+    title: Categories
   meetings:
     title: Meetings
-    output: true
+    output: false
   posts:
     title: Posts
     output: true

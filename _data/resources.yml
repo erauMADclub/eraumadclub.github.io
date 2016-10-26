@@ -1,0 +1,43 @@
+- category: Hardware
+  resources:
+  - name: Device Checkout 
+    url: https://goo.gl/forms/ggjbAtlDMFyAR3S23
+    url_text: Check out a device
+    description: Club members can make use of our hardware for personal and academic projects.
+
+- category: Android
+  resources:
+  - name: Sample Resource 
+    url: http://www.google.com
+    description: Testing
+
+  - name: Sample Resource 
+    url: http://www.google.com
+    description: Testing
+ 
+- category: iOS
+  resources:
+  - name: Sample Resource 
+    url: http://www.google.com
+    description: Testing
+
+  - name: Sample Resource 
+    url: http://www.google.com
+    description: Testing
+
+  - name: Sample Resource 
+    url: http://www.google.com
+    description: Testing
+    
+    
+  - name: Sample Resource 
+    url: http://www.google.com
+    description: Testing all the time lol
+    
+  - name: Sample Resource 
+    url: http://www.google.com
+    description: Testing
+  
+
+
+
