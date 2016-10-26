@@ -39,10 +39,10 @@
     description: Testing
   
 - category: Web Design
-   resources:
-   - name: Materialize CSS
-     url: http://materializecss.com/
-     description: A great, easy to use CSS framework for your website.
+  resources:
+  - name: MaterializeCSS
+    url: http://www.materializecss.com
+    description: An easy to use CSS framework for your website!
 
 
 
