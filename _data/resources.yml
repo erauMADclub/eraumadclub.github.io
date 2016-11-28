@@ -5,46 +5,66 @@
     url_text: Check out a device
     description: Club members can make use of our hardware for personal and academic projects.
 
+- category: Dev Tools
+  resources:
+  - name: GitHub Student Developer Pack
+    description: Hand-picked developer tools provided by GitHub, including unlimited private repositories and AWS hosting (among many others!)
+    url: https://education.github.com/pack
+    url_text: Sign Up
+    
+  - name: Microsoft Imagine
+    description: Free Microsoft software development tools for students.
+    url: https://imagine.microsoft.com/en-US/Home
+    url_text: Sign Up
+    
+  - name: Brackets
+    description: A modern, open-source code editor built for web design.
+    url: http://brackets.io/
+    
+  - name: Sublime Text Editor
+    description: Among the most popular text-editors for code. Cross platform and features plugins - not to mention incredibly customizable!
+    url: http://www.sublimetext.com/
+    
+  - name: Notepad++
+    description: A free source code editor and Notepad replacement that supports several languages.
+    url: https://notepad-plus-plus.org/
+    
+  - name: GitHub Gist
+    description: A service similar to Pastebin that allows you to share and store code snippets in nearly any language.
+    url: https://gist.github.com/
+    
+  - name: Stack Overflow
+    description: A Q&A platform that allows programmers to ask questons and read previously answered questons. Always search before asking! 
+    url: http://stackoverflow.com/
+    
+
 - category: Android
   resources:
-  - name: Sample Resource 
-    url: http://www.google.com
-    description: Testing
+  - name: Android Developers
+    url: https://developer.android.com/about/start.html
+    description: Developer setup and tutorial for your first Android mobile application.
 
-  - name: Sample Resource 
-    url: http://www.google.com
-    description: Testing
+  - name: MIT App Inventor
+    url: http://appinventor.mit.edu/explore/
+    description: Web-based platform for building your first Android mobile app, great for bootstrapping your idea. Includes Bluetooth, GPS, JSON web requests, etc...
  
 - category: iOS
   resources:
-  - name: Sample Resource 
-    url: http://www.google.com
-    description: Testing
-
-  - name: Sample Resource 
-    url: http://www.google.com
-    description: Testing
-
-  - name: Sample Resource 
-    url: http://www.google.com
-    description: Testing
-    
-    
-  - name: Sample Resource 
-    url: http://www.google.com
-    description: Testing all the time lol
-    
-  - name: Sample Resource 
-    url: http://www.google.com
-    description: Testing
+  - name: Apple Developers
+    url: https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/
+    description: The official Apple developer's tutorial for Swift.
   
-- category: Web Design
+- category: Web Development
   resources:
   - name: MaterializeCSS
     url: http://www.materializecss.com
     description: An easy to use CSS framework for your website!
     
-- category: App Development
+  - name: Bootstrap
+    description: The most popular HTML, CSS, and JS framework on the web.
+    url: http://getbootstrap.com/
+    
+- category: Multi-Platform App Development
   resources:
   - name: Xamarin.Forms
     url: https://www.xamarin.com/
